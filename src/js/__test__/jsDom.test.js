@@ -2,8 +2,8 @@
  * @jest-environment jsdom
  */
 
-import ValidatorPlay from "../ValidatorPlay";
-import Validator from "../Validator";
+import ValidatorPlay from '../ValidatorPlay';
+import Validator from '../Validator';
 
 test.each([
   ['Visa', '4024007143634649', true],
