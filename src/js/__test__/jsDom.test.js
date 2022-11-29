@@ -5,8 +5,6 @@
 import ValidatorPlay from "../ValidatorPlay";
 import Validator from "../Validator";
 
-import visaOdin from "../../img/visa.png";
-
 test.each([
   ['Visa', '4024007143634649', true],
   ['Visa', '4539371730302749', true],
@@ -32,13 +30,13 @@ test.each([
     const validator = new Validator(validatorPlay);
     validator.init();
 
-    const input = domElement.querySelector("[data-id=validator-card]");
+    const input = domElement.querySelector('[data-id=validator-card]');
     input.value = numberCard;
 
-    const submit = domElement.querySelector("[data-id=validate-btn]");
+    const submit = domElement.querySelector('[data-id=validate-btn]');
     submit.click();
 
-    const label = domElement.querySelector("[data-id=validator-label]");
+    const label = domElement.querySelector('[data-id=validator-label]');
 
     const received = label.textContent === name;
 

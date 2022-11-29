@@ -2,6 +2,8 @@
 
 ## Ссылкка на [github-pages](https://rt-vinsent.github.io/ahj-homeworks-4/)
 
+[![Build status](https://ci.appveyor.com/api/projects/status/fvrrw5pkcym5f9hl?svg=true)](https://ci.appveyor.com/project/RT-Vinsent/ahj-homeworks-4)
+
 # Домашнее задание к занятию "4.Организация тестирования"
 
 Правила сдачи задания:
