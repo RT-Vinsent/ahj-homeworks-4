@@ -2,6 +2,8 @@ export default function luna(value) {
   const reverseArray = value.split('').reverse();
   const arrForSum = [];
 
+  if (reverseArray.length <= 0) { return false; } // проверка на пустой ввод значения
+  
   for (let i = 0; i < reverseArray.length; i += 1) {
     if (i % 2 === 0) {
       arrForSum.push(reverseArray[i] * 1);

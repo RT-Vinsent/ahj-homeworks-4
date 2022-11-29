@@ -20,7 +20,7 @@ export default class ValidatorPlay {
   // check container
   checkBinding() {
     if (this.container === null) {
-      throw new Error('GalleryPlay not bind to DOM');
+      throw new Error('ValidatorPlay not bind to DOM');
     }
   }
 
