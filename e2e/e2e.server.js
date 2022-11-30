@@ -1,13 +1,16 @@
-const webpack = require('webpack');
+/* eslint-disable import/no-extraneous-dependencies */
+const Webpack = require('webpack');
 const WebpackDevServer = require('webpack-dev-server');
-const config = require('../webpack.prod');
+const webpackConfig = require('../webpack.prod');
 
-const server = new WebpackDevServer(webpack(config), {});
-server.listen(8888, 'localhost', (err) => {
-  if (err) {
-    return;
-  }
-  if (process.send) {
-    process.send('ok');
-  }
-});
+const compiler = Webpack(webpackConfig);
+// const devServerOptions = { ...webpackConfig.devServer, open: true };
+const devServerOptions = { compress: true, port: 8888, open: false };
+const server = new WebpackDevServer(devServerOptions, compiler);
+
+// const runServer = async () => {
+//   console.log('Starting server...');
+//   await server.start();
+// };
+
+export default server;
